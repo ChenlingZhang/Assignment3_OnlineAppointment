@@ -101,12 +101,9 @@
 		5A5164FC2A023AB200F3941E /* HealthBooking */ = {
 			isa = PBXGroup;
 			children = (
-				5A5164FD2A023AB200F3941E /* AppDelegate.swift */,
-				5A5164FF2A023AB200F3941E /* SceneDelegate.swift */,
-				5A5165012A023AB200F3941E /* ViewController.swift */,
-				5A5165032A023AB200F3941E /* Main.storyboard */,
-				5A5165092A023AB300F3941E /* Assets.xcassets */,
-				5A51650B2A023AB300F3941E /* LaunchScreen.storyboard */,
+				69BBAC762A09F16C00632E4B /* Module */,
+				69BBAC752A09F16200632E4B /* Controller */,
+				69BBAC742A09F15000632E4B /* View */,
 				5A51650E2A023AB300F3941E /* Info.plist */,
 				5A5165062A023AB200F3941E /* HealthBooking.xcdatamodeld */,
 			);
@@ -128,6 +125,33 @@
 				5A5165232A023AB300F3941E /* HealthBookingUITestsLaunchTests.swift */,
 			);
 			path = HealthBookingUITests;
+			sourceTree = "<group>";
+		};
+		69BBAC742A09F15000632E4B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5A5164FD2A023AB200F3941E /* AppDelegate.swift */,
+				5A5164FF2A023AB200F3941E /* SceneDelegate.swift */,
+				5A5165032A023AB200F3941E /* Main.storyboard */,
+				5A5165092A023AB300F3941E /* Assets.xcassets */,
+				5A51650B2A023AB300F3941E /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		69BBAC752A09F16200632E4B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		69BBAC762A09F16C00632E4B /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				5A5165012A023AB200F3941E /* ViewController.swift */,
+			);
+			path = Module;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
