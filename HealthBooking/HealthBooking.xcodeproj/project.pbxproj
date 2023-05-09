@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31B798422A09F6EB008C2B6C /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B798412A09F6EB008C2B6C /* PersonalInfoViewController.swift */; };
 		5A5164FE2A023AB200F3941E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5164FD2A023AB200F3941E /* AppDelegate.swift */; };
 		5A5165002A023AB200F3941E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5164FF2A023AB200F3941E /* SceneDelegate.swift */; };
 		5A5165022A023AB200F3941E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5165012A023AB200F3941E /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31B798412A09F6EB008C2B6C /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersonalInfoViewController.swift; path = ../../../../../../Desktop/ios/PersonalInfoViewController.swift; sourceTree = "<group>"; };
 		5A5164FA2A023AB200F3941E /* HealthBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A5164FD2A023AB200F3941E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A5164FF2A023AB200F3941E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,10 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				69BBAC762A09F16C00632E4B /* Module */,
-				69BBAC752A09F16200632E4B /* Controller */,
 				69BBAC742A09F15000632E4B /* View */,
 				5A51650E2A023AB300F3941E /* Info.plist */,
 				5A5165062A023AB200F3941E /* HealthBooking.xcdatamodeld */,
+				69BBAC752A09F16200632E4B /* Controller */,
 			);
 			path = HealthBooking;
 			sourceTree = "<group>";
@@ -142,6 +144,7 @@
 		69BBAC752A09F16200632E4B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				31B798412A09F6EB008C2B6C /* PersonalInfoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			files = (
 				5A5165022A023AB200F3941E /* ViewController.swift in Sources */,
 				5A5165082A023AB200F3941E /* HealthBooking.xcdatamodeld in Sources */,
+				31B798422A09F6EB008C2B6C /* PersonalInfoViewController.swift in Sources */,
 				5A5164FE2A023AB200F3941E /* AppDelegate.swift in Sources */,
 				5A5165002A023AB200F3941E /* SceneDelegate.swift in Sources */,
 			);
