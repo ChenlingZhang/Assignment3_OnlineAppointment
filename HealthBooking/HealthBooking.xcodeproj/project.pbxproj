@@ -17,6 +17,8 @@
 		5A5165182A023AB300F3941E /* HealthBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5165172A023AB300F3941E /* HealthBookingTests.swift */; };
 		5A5165222A023AB300F3941E /* HealthBookingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5165212A023AB300F3941E /* HealthBookingUITests.swift */; };
 		5A5165242A023AB300F3941E /* HealthBookingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5165232A023AB300F3941E /* HealthBookingUITestsLaunchTests.swift */; };
+		5AA7FB8E2A0A02D6003DFED7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA7FB8D2A0A02D6003DFED7 /* RegisterViewController.swift */; };
+		5AFECDE32A0B39E80003C954 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFECDE22A0B39E80003C954 /* AppointmentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		5A51651D2A023AB300F3941E /* HealthBookingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthBookingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A5165212A023AB300F3941E /* HealthBookingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthBookingUITests.swift; sourceTree = "<group>"; };
 		5A5165232A023AB300F3941E /* HealthBookingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthBookingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5AA7FB8D2A0A02D6003DFED7 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		5AFECDE22A0B39E80003C954 /* AppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,9 @@
 		69BBAC752A09F16200632E4B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5A5165012A023AB200F3941E /* ViewController.swift */,
+				5AA7FB8D2A0A02D6003DFED7 /* RegisterViewController.swift */,
+				5AFECDE22A0B39E80003C954 /* AppointmentViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -149,7 +156,6 @@
 		69BBAC762A09F16C00632E4B /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				5A5165012A023AB200F3941E /* ViewController.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -285,7 +291,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AFECDE32A0B39E80003C954 /* AppointmentViewController.swift in Sources */,
 				5A5165022A023AB200F3941E /* ViewController.swift in Sources */,
+				5AA7FB8E2A0A02D6003DFED7 /* RegisterViewController.swift in Sources */,
 				5A5165082A023AB200F3941E /* HealthBooking.xcdatamodeld in Sources */,
 				5A5164FE2A023AB200F3941E /* AppDelegate.swift in Sources */,
 				5A5165002A023AB200F3941E /* SceneDelegate.swift in Sources */,
