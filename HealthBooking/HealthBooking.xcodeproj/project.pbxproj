@@ -18,7 +18,9 @@
 		5A5165222A023AB300F3941E /* HealthBookingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5165212A023AB300F3941E /* HealthBookingUITests.swift */; };
 		5A5165242A023AB300F3941E /* HealthBookingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5165232A023AB300F3941E /* HealthBookingUITestsLaunchTests.swift */; };
 		5AA7FB8E2A0A02D6003DFED7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA7FB8D2A0A02D6003DFED7 /* RegisterViewController.swift */; };
-		5AFECDE32A0B39E80003C954 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFECDE22A0B39E80003C954 /* AppointmentViewController.swift */; };
+		69C558C82A0B8A7D005AA74C /* AppointmentUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C558C72A0B8A7D005AA74C /* AppointmentUIViewController.swift */; };
+		69C558CA2A0B9A51005AA74C /* AppointmentConfigUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C558C92A0B9A51005AA74C /* AppointmentConfigUIViewController.swift */; };
+		69C558CC2A0BA6E2005AA74C /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C558CB2A0BA6E2005AA74C /* Appointment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +56,9 @@
 		5A5165212A023AB300F3941E /* HealthBookingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthBookingUITests.swift; sourceTree = "<group>"; };
 		5A5165232A023AB300F3941E /* HealthBookingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthBookingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5AA7FB8D2A0A02D6003DFED7 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		5AFECDE22A0B39E80003C954 /* AppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
+		69C558C72A0B8A7D005AA74C /* AppointmentUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentUIViewController.swift; sourceTree = "<group>"; };
+		69C558C92A0B9A51005AA74C /* AppointmentConfigUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentConfigUIViewController.swift; sourceTree = "<group>"; };
+		69C558CB2A0BA6E2005AA74C /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Appointment.swift; path = HealthBooking/Controller/Appointment.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +152,8 @@
 			children = (
 				5A5165012A023AB200F3941E /* ViewController.swift */,
 				5AA7FB8D2A0A02D6003DFED7 /* RegisterViewController.swift */,
-				5AFECDE22A0B39E80003C954 /* AppointmentViewController.swift */,
+				69C558C72A0B8A7D005AA74C /* AppointmentUIViewController.swift */,
+				69C558C92A0B9A51005AA74C /* AppointmentConfigUIViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 		69BBAC762A09F16C00632E4B /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				69C558CB2A0BA6E2005AA74C /* Appointment.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -291,12 +297,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AFECDE32A0B39E80003C954 /* AppointmentViewController.swift in Sources */,
 				5A5165022A023AB200F3941E /* ViewController.swift in Sources */,
 				5AA7FB8E2A0A02D6003DFED7 /* RegisterViewController.swift in Sources */,
 				5A5165082A023AB200F3941E /* HealthBooking.xcdatamodeld in Sources */,
+				69C558CC2A0BA6E2005AA74C /* Appointment.swift in Sources */,
 				5A5164FE2A023AB200F3941E /* AppDelegate.swift in Sources */,
+				69C558C82A0B8A7D005AA74C /* AppointmentUIViewController.swift in Sources */,
 				5A5165002A023AB200F3941E /* SceneDelegate.swift in Sources */,
+				69C558CA2A0B9A51005AA74C /* AppointmentConfigUIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
