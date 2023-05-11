@@ -20,7 +20,6 @@
 		5AA7FB8E2A0A02D6003DFED7 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA7FB8D2A0A02D6003DFED7 /* RegisterViewController.swift */; };
 		69C558C82A0B8A7D005AA74C /* AppointmentUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C558C72A0B8A7D005AA74C /* AppointmentUIViewController.swift */; };
 		69C558CA2A0B9A51005AA74C /* AppointmentConfigUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C558C92A0B9A51005AA74C /* AppointmentConfigUIViewController.swift */; };
-		69C558CC2A0BA6E2005AA74C /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C558CB2A0BA6E2005AA74C /* Appointment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +57,6 @@
 		5AA7FB8D2A0A02D6003DFED7 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		69C558C72A0B8A7D005AA74C /* AppointmentUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentUIViewController.swift; sourceTree = "<group>"; };
 		69C558C92A0B9A51005AA74C /* AppointmentConfigUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentConfigUIViewController.swift; sourceTree = "<group>"; };
-		69C558CB2A0BA6E2005AA74C /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Appointment.swift; path = HealthBooking/Controller/Appointment.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +159,6 @@
 		69BBAC762A09F16C00632E4B /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				69C558CB2A0BA6E2005AA74C /* Appointment.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -300,7 +297,6 @@
 				5A5165022A023AB200F3941E /* ViewController.swift in Sources */,
 				5AA7FB8E2A0A02D6003DFED7 /* RegisterViewController.swift in Sources */,
 				5A5165082A023AB200F3941E /* HealthBooking.xcdatamodeld in Sources */,
-				69C558CC2A0BA6E2005AA74C /* Appointment.swift in Sources */,
 				5A5164FE2A023AB200F3941E /* AppDelegate.swift in Sources */,
 				69C558C82A0B8A7D005AA74C /* AppointmentUIViewController.swift in Sources */,
 				5A5165002A023AB200F3941E /* SceneDelegate.swift in Sources */,

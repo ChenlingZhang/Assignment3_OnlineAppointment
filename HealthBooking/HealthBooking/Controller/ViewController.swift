@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         if isValidEmail(email: email), let savedUserData = UserDefaults.standard.dictionary(forKey: email), savedUserData["password"] as? String == password {
             // login success
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            if let appointmentVC = storyboard.instantiateViewController(withIdentifier: "AppointmentViewController") as? AppointmentUIViewController {
+            if let appointmentVC = storyboard.instantiateViewController(withIdentifier: "AppointmentUIViewController") as? AppointmentUIViewController {
                 self.navigationController?.pushViewController(appointmentVC, animated: true)
             }
         } else {

@@ -109,7 +109,7 @@
         <!--AppointmentUI View Controller-->
         <scene sceneID="5fs-VG-79x">
             <objects>
-                <viewController storyboardIdentifier="AppointmentViewController" id="4Xq-eh-6Qt" customClass="AppointmentUIViewController" customModule="HealthBooking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AppointmentUIViewController" id="4Xq-eh-6Qt" customClass="AppointmentUIViewController" customModule="HealthBooking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tgx-Th-IRT">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
