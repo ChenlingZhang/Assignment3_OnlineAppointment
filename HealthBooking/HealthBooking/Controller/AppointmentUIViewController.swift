@@ -73,20 +73,20 @@ class AppointmentUIViewController: UIViewController{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationController = segue.destination as! AppointmentConfigUIViewController
-        
-        if segue.identifier == "booking01" {
-            destinationController.name = doctorName01.text
-            destinationController.img = doctorImg01.image!
-        }
-        else if segue.identifier == "booking02" {
-            destinationController.name = doctorName02.text
-            destinationController.img = doctorImg02.image!
-        }
-        else if segue.identifier == "booking03" {
-            destinationController.name = doctorName03.text
-            destinationController.img = doctorImg03.image!
+        if let destinationController = segue.destination as? AppointmentConfigUIViewController {
+            
+            if segue.identifier == "booking01" {
+                destinationController.name = doctorName01.text
+                destinationController.img = doctorImg01.image!
+            }
+            else if segue.identifier == "booking02" {
+                destinationController.name = doctorName02.text
+                destinationController.img = doctorImg02.image!
+            }
+            else if segue.identifier == "booking03" {
+                destinationController.name = doctorName03.text
+                destinationController.img = doctorImg03.image!
+            }
         }
     }
-    
 }
