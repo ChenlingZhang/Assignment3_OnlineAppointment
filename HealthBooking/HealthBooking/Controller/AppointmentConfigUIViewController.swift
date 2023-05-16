@@ -20,6 +20,7 @@ class AppointmentConfigUIViewController: UIViewController {
     let userDefault = UserDefaults.standard
     
     var name: String?
+    var currentEmail: String!
     var img: UIImage?
     var date: String?
     var time: String?
@@ -112,7 +113,7 @@ class AppointmentConfigUIViewController: UIViewController {
     }
     
     func saveAppointmentID(){
-        userDefault.set(try? PropertyListEncoder().encode(appointmentIDs), forKey: "appointments")
+        userDefault.set(try? PropertyListEncoder().encode(appointmentIDs), forKey: currentEmail)
     }
     
     func readButtonInfo() -> [ButtonInfo]{
