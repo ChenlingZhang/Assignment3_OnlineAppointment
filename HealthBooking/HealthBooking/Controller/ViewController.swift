@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         }
 
         if isValidEmail(email: email), let savedUserData = UserDefaults.standard.dictionary(forKey: email), savedUserData["password"] as? String == password {
+            UserDefaults.standard.set(email, forKey: "currentUserEmail")
             // login success
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             if let appointmentVC = storyboard.instantiateViewController(withIdentifier: "AppointmentUIViewController") as? AppointmentUIViewController {
