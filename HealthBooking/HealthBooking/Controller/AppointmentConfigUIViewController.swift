@@ -37,6 +37,7 @@ class AppointmentConfigUIViewController: UIViewController {
         doctorName.text = name
         selectedButtons = readButtonInfo()
         appointmentIDs = readAppointmentID()
+        currentEmail = readCurrentEmail()
         navigationBarSetting()
         bindAction()
     }
@@ -102,7 +103,7 @@ class AppointmentConfigUIViewController: UIViewController {
         else {
             id = "\(count)"
         }
-        let appointmentId = AppointmentID(appointmentID: id)
+        let appointmentId = AppointmentID(userEmail: currentEmail, appointmentID: id)
         appointmentIDs.append(appointmentId)
         
         return id
@@ -113,7 +114,11 @@ class AppointmentConfigUIViewController: UIViewController {
     }
     
     func saveAppointmentID(){
-        userDefault.set(try? PropertyListEncoder().encode(appointmentIDs), forKey: currentEmail)
+        userDefault.set(try? PropertyListEncoder().encode(appointmentIDs), forKey: "appointments")
+    }
+    
+    func readCurrentEmail()->String{
+        return userDefault.value(forKey: "currentUserEmail") as! String
     }
     
     func readButtonInfo() -> [ButtonInfo]{
@@ -212,5 +217,6 @@ struct ButtonInfo: Codable, Comparable {
 }
 
 struct AppointmentID: Codable {
+    var userEmail: String
     var appointmentID: String
 }
