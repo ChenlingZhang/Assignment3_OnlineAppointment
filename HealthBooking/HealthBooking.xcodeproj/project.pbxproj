@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		31AAA1072A13296D00AA4E20 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AAA1062A13296D00AA4E20 /* ProfileViewController.swift */; };
+		31AAA1092A14F89400AA4E20 /* CancellationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AAA1082A14F89400AA4E20 /* CancellationCell.swift */; };
 		5A5164FE2A023AB200F3941E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5164FD2A023AB200F3941E /* AppDelegate.swift */; };
 		5A5165002A023AB200F3941E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5164FF2A023AB200F3941E /* SceneDelegate.swift */; };
 		5A5165022A023AB200F3941E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5165012A023AB200F3941E /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		31AAA1062A13296D00AA4E20 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		31AAA1082A14F89400AA4E20 /* CancellationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellationCell.swift; sourceTree = "<group>"; };
 		5A5164FA2A023AB200F3941E /* HealthBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A5164FD2A023AB200F3941E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A5164FF2A023AB200F3941E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				69C558C92A0B9A51005AA74C /* AppointmentConfigUIViewController.swift */,
 				31AAA1062A13296D00AA4E20 /* ProfileViewController.swift */,
 				69B6A8C52A10F98A005AC811 /* CancellationViewController.swift */,
+				31AAA1082A14F89400AA4E20 /* CancellationCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				69C558C82A0B8A7D005AA74C /* AppointmentUIViewController.swift in Sources */,
 				31AAA1072A13296D00AA4E20 /* ProfileViewController.swift in Sources */,
 				5A5165002A023AB200F3941E /* SceneDelegate.swift in Sources */,
+				31AAA1092A14F89400AA4E20 /* CancellationCell.swift in Sources */,
 				69C558CA2A0B9A51005AA74C /* AppointmentConfigUIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
