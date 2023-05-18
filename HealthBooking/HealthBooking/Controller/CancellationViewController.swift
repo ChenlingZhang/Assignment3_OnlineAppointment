@@ -41,6 +41,13 @@ class CancellationViewController: UIViewController, UITableViewDataSource, UITab
         return allAppointmentIDs.filter { $0.userEmail == currentUserEmail }
     }
     
+    func saveAppointmentIDs() {
+        let encoder = PropertyListEncoder()
+        if let encodedData = try? encoder.encode(appointmentIDs) {
+            userDefault.set(encodedData, forKey: "appointments")
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return appointmentIDs.count
     }
@@ -60,5 +67,9 @@ class CancellationViewController: UIViewController, UITableViewDataSource, UITab
         let index = sender.tag
         appointmentIDs.remove(at: index)
         tableView.reloadData()
+        
+        saveAppointmentIDs()
     }
+    
+    
 }
