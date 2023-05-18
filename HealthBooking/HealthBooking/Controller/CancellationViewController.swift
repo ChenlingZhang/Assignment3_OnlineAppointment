@@ -12,15 +12,12 @@ import ObjectiveC
 class CancellationViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
   
     
+    @IBOutlet weak var tableView: UITableView!
+    
     
     let userDefault = UserDefaults.standard
     let currentUserEmail = UserDefaults.standard.string(forKey: "currentUserEmail") ?? ""
     var appointmentIDs: [AppointmentID] = []
-    
-    @IBAction func pressedBtnConfirm(_ sender: Any) {
-    }
-    
-    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
