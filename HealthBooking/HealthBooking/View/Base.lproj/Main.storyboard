@@ -110,7 +110,7 @@
             <objects>
                 <viewController storyboardIdentifier="AppointmentUIViewController" id="4Xq-eh-6Qt" customClass="AppointmentUIViewController" customModule="HealthBooking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tgx-Th-IRT">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLr-kF-0QV">
@@ -237,13 +237,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PPi-2K-t8d">
-                                <rect key="frame" x="0.0" y="59" width="195" height="759"/>
+                                <rect key="frame" x="0.0" y="0.0" width="195" height="842"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ONU-I2-106">
-                                        <rect key="frame" x="0.0" y="0.0" width="195" height="759"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="195" height="842"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObS-DK-CMd">
-                                                <rect key="frame" x="0.0" y="0.0" width="195" height="253"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="195" height="280.66666666666669"/>
                                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="View Profile"/>
@@ -252,7 +252,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Md-DU-bQD">
-                                                <rect key="frame" x="0.0" y="253" width="195" height="253"/>
+                                                <rect key="frame" x="0.0" y="280.66666666666663" width="195" height="280.66666666666663"/>
                                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="View Appointment  "/>
@@ -261,7 +261,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udc-Yw-mZ0">
-                                                <rect key="frame" x="0.0" y="506" width="195" height="253"/>
+                                                <rect key="frame" x="0.0" y="561.33333333333337" width="195" height="280.66666666666663"/>
                                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
@@ -964,7 +964,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lw1-86-PgQ">
-                                <rect key="frame" x="16" y="103" width="361" height="619"/>
+                                <rect key="frame" x="16" y="103" width="361" height="586"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -1008,9 +1008,21 @@
                                     <outlet property="delegate" destination="Zpi-3a-r20" id="MSZ-h5-EK6"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3k9-HZ-vBY">
+                                <rect key="frame" x="154" y="757.66666666666663" width="85" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Confirm"/>
+                                <connections>
+                                    <segue destination="4Xq-eh-6Qt" kind="show" id="MDU-D3-zPJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6CS-CE-T9A"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6CS-CE-T9A" firstAttribute="bottom" secondItem="3k9-HZ-vBY" secondAttribute="bottom" constant="50" id="4XB-Fp-jb4"/>
+                            <constraint firstItem="3k9-HZ-vBY" firstAttribute="centerX" secondItem="6CS-CE-T9A" secondAttribute="centerX" id="9TC-pX-BvG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="CZq-cA-7b9"/>
                     <connections>
@@ -1168,6 +1180,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="MDU-D3-zPJ"/>
         <segue reference="nFA-he-wZ7"/>
     </inferredMetricsTieBreakers>
     <resources>
