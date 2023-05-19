@@ -72,6 +72,20 @@ class CancellationViewController: UIViewController, UITableViewDataSource, UITab
         return cell
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        let label = UILabel(frame: CGRect(x: 16, y: 0, width: tableView.bounds.width - 32, height: 30))
+        label.text = "AppointmentID"
+        // 自定义 label 的样式，如字体、颜色等
+        headerView.addSubview(label)
+        return headerView
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
+
+    
     @objc func deleteButtonTapped(_ sender: UIButton) {
         let index = sender.tag
 
