@@ -140,7 +140,4 @@ class CancellationViewController: UIViewController, UITableViewDataSource, UITab
         // Present the alert controller
         present(alertController, animated: true, completion: nil)
     }
-
-    
-    
 }
