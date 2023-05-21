@@ -17,12 +17,15 @@ class CancellationViewController: UIViewController, UITableViewDataSource, UITab
     let userDefault = UserDefaults.standard
     let currentUserEmail = UserDefaults.standard.string(forKey: "currentUserEmail") ?? ""
     var appointmentIDs: [AppointmentID] = []
+    var buttonInfos: [ButtonInfo] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         appointmentIDs = readCurrentUserAppointmentIDs()
+        buttonInfos = readButtonInfo()
+        print(buttonInfos.count)
         tableView.reloadData()
     }
     
@@ -35,6 +38,19 @@ class CancellationViewController: UIViewController, UITableViewDataSource, UITab
             // Decode the data into an array of AppointmentID
             if let savedAppointmentIDs = try? PropertyListDecoder().decode([AppointmentID].self, from: saveData) {
                 return savedAppointmentIDs
+            }
+        }
+        // Return an empty array if decoding fails or no saved data exists
+        return []
+    }
+    
+    // Read all button info
+    func readButtonInfo() -> [ButtonInfo] {
+        // Retrieve saved data from UserDefaults
+        if let saveData = userDefault.value(forKey: "selectButtons") as? Data {
+            // Decode the data into an array of Button Info
+            if let savedButtonInfo = try? PropertyListDecoder().decode([ButtonInfo].self, from: saveData) {
+                return savedButtonInfo
             }
         }
         // Return an empty array if decoding fails or no saved data exists
@@ -58,15 +74,24 @@ class CancellationViewController: UIViewController, UITableViewDataSource, UITab
             tableView.reloadData()
         }
     }
+    
+    func saveButtonInfos(){
+        userDefault.set(try? PropertyListEncoder().encode(buttonInfos), forKey: "selectButtons")
+    }
 
     // Delete an appointment
     func deleteAppointment(at index: Int) {
         // Check if the index is within the valid range
         if appointmentIDs.indices.contains(index) {
+            let id = appointmentIDs[index].appointmentID
             // Remove the appointment ID at the given index from the array
             appointmentIDs.remove(at: index)
+            if buttonInfos[index].appointmentId == id {
+                buttonInfos.remove(at: index)
+            }
             // Save the updated appointment IDs and reload the table view
             saveAppointmentIDs()
+            saveButtonInfos()
         }
     }
 

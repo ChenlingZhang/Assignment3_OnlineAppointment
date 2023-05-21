@@ -36,6 +36,7 @@ class AppointmentConfigUIViewController: UIViewController {
         doctorView.image = img
         doctorName.text = name
         selectedButtons = readButtonInfo()
+        print(selectedButtons.count)
         appointmentIDs = readAppointmentID()
         currentEmail = readCurrentEmail()
         navigationBarSetting()
@@ -59,11 +60,13 @@ class AppointmentConfigUIViewController: UIViewController {
                         button.addTarget(self, action: #selector(onclick), for: .touchUpInside)
                         
                         // diable selceted buttons
-                        var buttonInfo = ButtonInfo(column: button.cloumnId,row: button.rowId, doctorName: name!)
-                        
-                        if selectedButtons.contains(buttonInfo){
-                            button.isEnabled = false
+                        let buttonInfo = ButtonInfo(column: button.cloumnId,row: button.rowId, doctorName: name!)
+                        for item in selectedButtons {
+                            if (item.column == buttonInfo.column) && (item.row == buttonInfo.row) && (item.doctorName == buttonInfo.doctorName) {
+                                button.isEnabled = false
+                            }
                         }
+                        
                         tableCell += 1
                     }
                     tableCloumn += 1
@@ -88,7 +91,7 @@ class AppointmentConfigUIViewController: UIViewController {
     }
     
     func generateAppointmentID() -> String{
-        let count = selectedButtons.count
+        let count = appointmentIDs.count + 1
         var id = ""
         
         if count < 10 {
@@ -142,11 +145,11 @@ class AppointmentConfigUIViewController: UIViewController {
     @IBAction func backOnclick(_ sender: UIButton) {
         let id1 = selectedButton?.cloumnId
         let id2 = selectedButton?.rowId
-        let buttonInfo = ButtonInfo(column: id1,row: id2, doctorName: name!)
 
-        if (buttonInfo.column != nil) && (buttonInfo.row != nil) {
-            selectedButtons.append(buttonInfo)
+        if (id1 != nil) && (id2 != nil) {
             let message = generateAppointmentID()
+            let buttonInfo = ButtonInfo(column: id1,row: id2, doctorName: name!, appointmentId: message)
+            selectedButtons.append(buttonInfo)
             saveButtonInfo()
             saveAppointmentID()
             showAlert(title: "Your Appointment ID", message: message)
@@ -203,17 +206,11 @@ extension UIButton {
     }
 }
 
-struct ButtonInfo: Codable, Comparable {
-    static func < (lhs: ButtonInfo, rhs: ButtonInfo) -> Bool {
-        if (lhs.column == rhs.column) && (lhs.row == rhs.row) && (lhs.doctorName == rhs.doctorName){
-            return true
-        }
-        return false
-    }
-    
+struct ButtonInfo: Codable {
     var column: Int?
     var row: Int?
     var doctorName: String
+    var appointmentId: String?
 }
 
 struct AppointmentID: Codable {
